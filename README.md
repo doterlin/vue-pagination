@@ -8,16 +8,15 @@
 ## 安装
 你可以通过以下方法获取`vue-pagination-bs`文件:
 
-1. 使用`git`下载:
+- 使用`git`下载:
 ```
 git clone git@github.com:doterlin/vue-pagination.git
 ```
-
-2. 使用`npm`安装：
+- 使用`npm`安装：
 ```
 npm i vue-pagination-bs
 ```
-3. 点击[这里](https://github.com/doterlin/vue-pagination/archive/master.zip)下载`zip`
+- 点击[这里](https://github.com/doterlin/vue-pagination/archive/master.zip)下载`zip`
 
 ## 如何使用
 
