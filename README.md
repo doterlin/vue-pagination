@@ -1,5 +1,6 @@
 # vue-pagination-bs
 `vue-pagination-bs`是一个`bootstrap`风格的`vue.js`(2.0)分页组件。
+
 Demo演示请点这里:[https://doterlin.github.io/vue-pagination/](https://doterlin.github.io/vue-pagination/)
 ![demo](https://github.com/doterlin/vue-pagination/blob/master/img/demo.png)
 
