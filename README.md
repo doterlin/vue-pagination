@@ -11,7 +11,7 @@ Demo演示请点这里:[https://doterlin.github.io/vue-pagination/](https://dote
 ## 安装
 你可以通过以下方法获取`vue-pagination-bs`文件:
 
-+ 使用`git`下载:
++ 使用`git`下载(推荐):
 ```
 git clone git@github.com:doterlin/vue-pagination.git
 ```
