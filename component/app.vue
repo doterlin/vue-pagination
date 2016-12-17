@@ -1,18 +1,17 @@
 //App.vue 
-//测试其他组件用的文件，可随意更改
-//使用webpack编译后可在../web/vw-test/index.html查看效果
+//这是父组件示例
 //author: lhq
 //2016-11-30
 
 <template>
   <div id="app">
-    <!-- <img src="./images/logo.png"> -->
     <h1 class="title" v-text="msg"></h1>
      <pagination :totalPage="parentTotalPage" :currentPage="parentCurrentpage" :changeCallback="parentCallback"></pagination>
   </div>
 </template>
 
 <script>
+//引入pagination组件
 import pagination from './pagination.vue';
 
 export default {
@@ -20,14 +19,18 @@ export default {
   data () {
     return {
       msg : "Update your data here.",
+      //在data中初始化总页数totalPage，和当前页currentPage
       parentTotalPage: 100,
       parentCurrentpage: 1
     }
   },
-  //使用组件
+  //使用pagination组件
   components: { pagination },
   methods:{
+    //在这里传入pagination的跳转页码回调方法
+    //cpage是已跳转的当前页码
     parentCallback( cPage )  {
+      //这里是页码变化后要做的事
       this.msg = 'Update your data here. Page: ' + cPage;
     }
   }
