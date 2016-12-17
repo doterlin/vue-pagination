@@ -1,7 +1,7 @@
 {
-  "name": "appweb",
-  "version": "0.1.0",
-  "description": "Web for app.",
+  "name": "vue-pagination-bs",
+  "version": "0.1.1",
+  "description": "A vue.js pagination component and bootstrap style.",
   "author": "doterlin",
   "private": false,
   "scripts": {
