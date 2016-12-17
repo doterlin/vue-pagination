@@ -1,37 +1,37 @@
 # vue-pagination-bs
-`vue-pagination-bs`æ˜¯ä¸€ä¸ª`bootstrap`é£Žæ ¼çš„`vue.js`(2.0)åˆ†é¡µç»„ä»¶ã€‚
+`vue-pagination-bs`ÊÇÒ»¸ö`bootstrap`·ç¸ñµÄ`vue.js`(2.0)·ÖÒ³×é¼þ¡£
 
-> å…³äºŽ`vue.js`è¯·ç‚¹[è¿™é‡Œ](https://cn.vuejs.org/v2/guide/index.html)
+> ¹ØÓÚ`vue.js`Çëµã[ÕâÀï](https://cn.vuejs.org/v2/guide/index.html)
 
-> å…³äºŽ`webpack`+`vueå•æ–‡ä»¶ç»„ä»¶`è¯·å‚è€ƒ[è¿™é‡Œ](https://cn.vuejs.org/v2/guide/single-file-components.html)
+> ¹ØÓÚ`webpack`+`vueµ¥ÎÄ¼þ×é¼þ`Çë²Î¿¼[ÕâÀï](https://cn.vuejs.org/v2/guide/single-file-components.html)
 
-## å®‰è£…
-ä½ å¯ä»¥é€šè¿‡ä»¥ä¸‹æ–¹æ³•èŽ·å–`vue-pagination-bs`æ–‡ä»¶
+## °²×°
+Äã¿ÉÒÔÍ¨¹ýÒÔÏÂ·½·¨»ñÈ¡`vue-pagination-bs`ÎÄ¼þ:
 
-1. ä½¿ç”¨`git`ä¸‹è½½:
+### Ê¹ÓÃ`git`ÏÂÔØ:
 ```
 git clone git@github.com:doterlin/vue-pagination.git
 ```
 
-2. ä½¿ç”¨`npm`å®‰è£…ï¼š
+### Ê¹ÓÃ`npm`°²×°£º
 ```
 npm i vue-pagination-bs
 ```
-3. ç‚¹å‡»[è¿™é‡Œ](https://github.com/doterlin/vue-pagination/archive/master.zip)ä¸‹è½½`zip`
+### µã»÷[ÕâÀï](https://github.com/doterlin/vue-pagination/archive/master.zip)ÏÂÔØ`zip`
 
-## å¦‚ä½•ä½¿ç”¨
-+ å®‰è£…ä¾èµ–
+## ÈçºÎÊ¹ÓÃ
+1 °²×°ÒÀÀµ
 ```
 npm install
 ```
-+ åœ¨ä½ çš„appä¸­å¼•å…¥`vue-pagination`å³`./component/app.vue`å¹¶åˆå§‹åŒ–ã€‚
-+ åœ¨ä½ çš„htmlé‡Œå¼•å…¥ç”Ÿæˆçš„`./dist/build.js`(å…·ä½“è¯·å‚è€ƒ`./component/app.vue`å’Œ'./src/app.js').
-+ è¿è¡Œå‘½ä»¤è¿›è¡Œç¼–è¯‘ï¼š
+2 ÔÚÄãµÄappÖÐÒýÈë`vue-pagination`¼´`./component/app.vue`²¢³õÊ¼»¯¡£
+3 ÔÚÄãµÄhtmlÀïÒýÈëÉú³ÉµÄ`./dist/build.js`(¾ßÌåÇë²Î¿¼`./component/app.vue`ºÍ'./src/app.js').
+4 ÔËÐÐÃüÁî½øÐÐ±àÒë£º
 ```
 npm run build
 ```
 
-> æœ‰é—®é¢˜è‚¯è¯·ä¸åæŒ‡æ­£å’Œäº¤æµï¼Œå…±åŒè¿›æ­¥ï¼
+> ÓÐÎÊÌâ¿ÏÇë²»ÁßÖ¸ÕýºÍ½»Á÷£¬¹²Í¬½ø²½£¡
 
 > QQ: 453845311
 
