@@ -1,7 +1,7 @@
 //App.vue 
 //这是父组件示例
-//author: lhq
-//2016-11-30
+//author: doterlin
+//2016-12-16
 
 <template>
   <div id="app">

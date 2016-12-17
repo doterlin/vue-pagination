@@ -1,5 +1,5 @@
 //pagination.vue  bootstrap风格分页组件
-//author: lhq
+//author: doterlin
 //2016-12-16
 
 <template>
