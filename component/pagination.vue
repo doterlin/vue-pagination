@@ -19,7 +19,7 @@
        </ul>
     <small class="small nowrap"> 当前第 <span class="text-primary" v-text="currentPage"></span> 页，共有 <span class="text-primary" v-text="totalPage"></span> 页</small>
     <div class="go">
-      <div class="input-group">
+      <div :class="isPageNumberError?'input-group error':'input-group'">
         <input class="form-control" type="number" v-model="goToPage"><a href="javascript:;" class="input-group-addon" @click="turnToPage(goToPage)">Go</a>
       </div>
     </div>
@@ -32,7 +32,7 @@ export default {
         //传入总页数，默认100
 		totalPage: {
 			type: Number,
-      		default: 100,
+      		default: 1,
       		required: true,
 		    validator(value) {
 		        return value >= 0
@@ -42,7 +42,7 @@ export default {
         //传入当前页，默认1
 		currentPage:{
 			type: Number,
-      		default: 2,
+      		default: 1,
 		    validator(value) {
 		        return value >= 0
 		    }
@@ -60,7 +60,8 @@ export default {
 	},
 	data(){
 		return {
-			myCurrentPage : 1
+			myCurrentPage : 1,
+            isPageNumberError: false
 		}
 	},
 	computed:{
@@ -80,9 +81,12 @@ export default {
 
 			//页数不合法则退出
 			if (!pageNum || pageNum > ts.totalPage || pageNum < 1) {
-				console.log('页码输入有误！')
+				console.log('页码输入有误！');
+                ts.isPageNumberError = true;
 				return false;		
-			}
+			}else{
+                ts.isPageNumberError = false;
+            }
 
 			//更新当前页
 			ts.myCurrentPage = pageNum;
@@ -127,7 +131,7 @@ export default {
     text-align: center;
     background-color: #eee;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 0 4px 4px 0;
 }
 
 .input-group-addon, .input-group-btn {
@@ -153,6 +157,9 @@ export default {
     width: 100%;
     margin-bottom: 0;
 }
+.go .error .form-control{
+    border: 1px solid #d95656;
+}
 .form-control {
     display: block;
     width: 100%;
@@ -173,6 +180,11 @@ export default {
 }
 .text-primary {
     color: #428bca;
+}
+.pagination>li:first-child>a, .pagination>li:first-child>span {
+    margin-left: 0;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 .go {
     display: inline-block;
