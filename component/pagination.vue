@@ -79,7 +79,7 @@ export default {
 			var pageNum = parseInt(pageNum);
 
 			//页数不合法则退出
-			if (pageNum > ts.totalPage || pageNum < 1) {
+			if (!pageNum || pageNum > ts.totalPage || pageNum < 1) {
 				console.log('页码输入有误！')
 				return false;		
 			}
