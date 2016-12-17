@@ -19,7 +19,11 @@ npm i vue-pagination-bs
 ```
 3. 点击[这里](https://github.com/doterlin/vue-pagination/archive/master.zip)下载`zip`
 
-## 使用
+## 如何使用
++ 安装依赖
+```
+npm install
+```
 + 在你的app中引入`vue-pagination`即`./component/app.vue`并初始化。
 + 在你的html里引入生成的`./dist/build.js`(具体请参考`./component/app.vue`和'./src/app.js').
 + 运行命令进行编译：
@@ -27,7 +31,7 @@ npm i vue-pagination-bs
 npm run build
 ```
 
-> 有问题肯请不吝指正！欢迎交流，共同进步！
+> 有问题肯请不吝指正和交流，共同进步！
 
 > QQ: 453845311
 
