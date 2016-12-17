@@ -5,7 +5,7 @@
 <template>
   <div class="pagination-wrap" v-cloak v-if="totalPage!=0">
       <ul class="pagination">
-        <li :class="currentPage==1?'disabled':''"><a href="javascript:;" @click="turnToPage(1)">&laquo;</a></li>
+        <li :class="currentPage==1?'disabled':''"><a href="javascript:;" @click="turnToPage(1)">首页</a></li>
         <li :class="currentPage==1?'disabled':''"><a @click="turnToPage(currentPage-1)" href="javascript:;">上一页</a></li>
         <li><a href="javascript:;" @click="turnToPage(currentPage-3)" v-text="currentPage-3" v-if="currentPage-3>0"></a></li>
         <li><a href="javascript:;" @click="turnToPage(currentPage-2)" v-text="currentPage-2" v-if="currentPage-2>0"></a></li>
@@ -15,7 +15,7 @@
         <li><a href="javascript:;" @click="turnToPage(currentPage+2)" v-text="currentPage+2" v-if="currentPage+2<totalPage"></a></li>
         <li><a href="javascript:;" @click="turnToPage(currentPage+3)" v-text="currentPage+3" v-if="currentPage+3<totalPage"></a></li>
         <li :class="currentPage==totalPage?'disabled':''"><a href="javascript:;" @click="turnToPage(currentPage+1)" >下一页</a></li>
-        <li :class="currentPage==totalPage?'disabled':''"><a href="javascript:;" @click="turnToPage(totalPage)">&raquo;</a></li>
+        <li :class="currentPage==totalPage?'disabled':''"><a href="javascript:;" @click="turnToPage(totalPage)">尾页</a></li>
        </ul>
     <small class="small nowrap"> 当前第 <span class="text-primary" v-text="currentPage"></span> 页，共有 <span class="text-primary" v-text="totalPage"></span> 页</small>
     <div class="go">
@@ -29,7 +29,8 @@
 <script type="text/javascript">
 export default {
 	props: {
-		totalPage: {//传入总页数，默认100
+        //传入总页数，默认100
+		totalPage: {
 			type: Number,
       		default: 100,
       		required: true,
@@ -37,19 +38,22 @@ export default {
 		        return value >= 0
 		    }
 		}, 
-		currentPage:{//传入当前页，默认1
+
+        //传入当前页，默认1
+		currentPage:{
 			type: Number,
       		default: 2,
 		    validator(value) {
 		        return value >= 0
 		    }
 		},
+
+        //传入页面改变时的回调，用于更新你的数据
+        //回调默认是打印当前页
+        //请根据需要在传入的回调函数里更改函数体
 		changeCallback: {
 	    	type: Function,
 	    	default(cPage) {
-	    		//传入页面改变时的回调，用于更新你的数据
-				//回调默认是打印当前页
-				//请根据需要在传入的回调函数里更改函数体
 				console.log("默认回调，显示页码：" + cPage);
 	        }
 	     }
@@ -61,8 +65,8 @@ export default {
 	},
 	computed:{
 		// prop不应该在组件内部做改变
-		// 所以我们这里设置一个内部计算属性来代替props中的currentPage
-		// 参考https://cn.vuejs.org/v2/guide/components.html#单向数据流
+		// 所以我们这里设置一个内部计算属性myCurrentPage来代替props中的currentPage
+		// 为什么要这么做？参考：https://cn.vuejs.org/v2/guide/components.html#单向数据流
 		currentPage(){ 
 			return this.myCurrentPage;
 		}

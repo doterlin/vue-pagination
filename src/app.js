@@ -1,10 +1,9 @@
 import Vue from 'vue'
-import App from '../../../component/App2.vue'
-//Vue.config.silent = true;
-var app = window.vueApp = new Vue({
-	data: {
-		toastMsg: ''
-	},
+import App from '../component/app.vue'
+
+//一个vue实例
+var app = new Vue({
+	data: {},
 	el: '#app',
 	render: h => h(App),
 	mounted() {

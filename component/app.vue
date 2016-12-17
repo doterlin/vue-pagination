@@ -28,7 +28,7 @@ export default {
   components: { pagination },
   methods:{
     //在这里传入pagination的跳转页码回调方法
-    //cpage是已跳转的当前页码
+    //cPage参数是已跳转的当前页码
     parentCallback( cPage )  {
       //这里是页码变化后要做的事
       this.msg = 'Update your data here. Page: ' + cPage;
